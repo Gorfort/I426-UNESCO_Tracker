@@ -33,7 +33,6 @@ Front-End is mainly made by **Mateja** _(mateja-velickovic)_, **Yohan** _(yohcar
 
  Back-End is mainly made by **Quentin** _(quemet)_ and **Esteban** _(estebanstb)_.
 
-Thankfully made with [contrib.rocks](https://contrib.rocks).
 
 ## Product Goal
 
