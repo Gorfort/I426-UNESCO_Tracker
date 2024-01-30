@@ -3,7 +3,7 @@
 
 ## Authors
 
-<a href="https://github.com/estebanstb/426-UNESCO/graphs/contributors">
+<a href="https://github.com/gorfort/426-UNESCO/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=estebanstb/426-UNESCO" />
 </a>
 
