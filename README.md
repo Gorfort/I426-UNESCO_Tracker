@@ -23,7 +23,7 @@ To keep our schedules, we use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#
 Front-End is mainly made by **Mateja** _(mateja-velickovic)_, **Yohan** _(yohcard)_ and **Amir** _(AmirZeqiri05)_.
 
 ## Website Back-End ⚙️
-<img src="https://avatars.githubusercontent.com/u/129742514?v=4" width="50" height="50" style="border-radius:50%"/>&nbsp;
+ <a href="url"><img src="[https://desmond75.github.io/img/IMG_20171214_095012.jpg](https://avatars.githubusercontent.com/u/129742514?v=4)" height="50" width="50" style="border-radius:50%"></a>
  Back-End is mainly made by **Quentin** _(quemet)_ and **Esteban** _(estebanstb)_.
 
 
