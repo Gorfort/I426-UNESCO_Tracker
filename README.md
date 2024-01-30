@@ -6,7 +6,6 @@
   <img src="https://contrib.rocks/image?repo=estebanstb/426-UNESCO" />
 </a>
 
-Thanks to [contrib.rocks](https://contrib.rocks) for making this contributors profile web app.
 
 # Product Goal
 
