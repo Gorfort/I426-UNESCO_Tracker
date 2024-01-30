@@ -1,6 +1,6 @@
 # I426-UNESCO_Tracker 🌍<br>
 ## Project Description 
-Create an interactive website enabling users to explore and follow UNESCO World Heritage sites displayed on an interactive map. This online platform enables users to tag sites they have already visited, providing an immersive experience for discovering and exploring UNESCO World Heritage.
+Discover the world of UNESCO World Heritage through our interactive website. Easily explore and follow iconic sites displayed on an interactive map. Mark the sites you've already visited and immerse yourself in an immersive experience to discover and explore UNESCO's rich World Heritage. 
 ## &nbsp;Languages and Tools 🛠
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -28,9 +28,4 @@ Front-End is mainly made by **Mateja** _(mateja-velickovic)_, **Yohan** _(yohcar
 
 
 ## Product Goal 🚩
-
-...
-
-## Web Mock-Ups
-
-> > > > > > > Stashed changes
+Create an interactive website enabling users to explore and follow UNESCO World Heritage sites displayed on an interactive map. This online platform enables users to tag sites they have already visited, providing an immersive experience for discovering and exploring UNESCO World Heritage.
