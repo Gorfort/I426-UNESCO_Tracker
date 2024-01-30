@@ -5,7 +5,6 @@
 <a href="https://github.com/estebanstb/426-UNESCO/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=estebanstb/426-UNESCO" />
 </a>
-<<<<<<< Updated upstream
 
 Thanks to [contrib.rocks](https://contrib.rocks) for making this contributors profile web app.
 
