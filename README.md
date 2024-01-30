@@ -14,7 +14,7 @@ Create an interactive website enabling users to explore and follow UNESCO World 
 
 To keep our schedules, we were recommended to use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#/project) a website that manages all kind of Scrum Methodology Project.
 
-## Web Mock-Ups 💻
+## Web Mock-Ups 🏞️
 
 **Thibaud** _(Gorfort)_ was asked if he could do the web-mockups considering that he's good with everything creative related.
 
