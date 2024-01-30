@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../ressource/css/style.css" />
+    <title>UNESCO - Contact</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">PATRIMOINE</a></li>
+        <li><a href="lieuVisite.html">LIEUX VISITÉS</a></li>
+        <li><a href="" id="active">NOUS CONTACTER</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Nous contacter</h1>
+    </main>
+
+    <footer></footer>
+
+    <div class="container">
+      <form action="/action_page.php">
+        <label for="fname">Prénom</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Votre prénom.."
+        />
+
+        <label for="lname">Nom de famille</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Votre nom de famille.."
+        />
+
+        <label for="country">Pays</label>
+        <select id="country" name="country">
+          <option value="suisse">Suisse</option>
+          <option value="lichtenstein">Lichtenstein</option>
+          <option value="albanie">Albanie</option>
+          <option value="kosovo">Kosovo</option>
+          <option value="algerie">Algérie</option>
+          <option value="serbie">Serbie</option>
+          <option value="france">France</option>
+        </select>
+
+        <label for="sujet">Sujet</label>
+        <textarea
+          id="sujet"
+          name="sujet"
+          placeholder="Écrivez quelque chose.."
+          style="height: 200px"
+        ></textarea>
+
+        <input type="soumettre" value="Soumettre" />
+      </form>
+    </div>
+  </body>
+</html>
