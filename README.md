@@ -12,7 +12,7 @@ Discover the world of UNESCO World Heritage through our interactive website. Eas
 
 ## Scrum Methodology 📚
 
-To keep our schedules, we were recommended to use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#/project) a website that manages all kind of Scrum Methodology Project.
+To keep our schedules, we use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#/project) a website that manages all kind of Scrum Methodology Project.
 
 ## Web Mock-Ups 🏞️
 
