@@ -20,53 +20,53 @@
           <li><a id="active" href="">NOUS CONTACTER</a></li>
         </ul>
       </div>
+      <img id="logo" src="../../ressource/images/logoUNESCO.png" alt="" />
     </nav>
 
     <main>
-      <h1>Nous contacter</h1>
+      <h1>Page de contact - Service informatique</h1>
+
+      <div class="container">
+        <form action="/action_page.php">
+          <label for="fname">Prénom</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Votre prénom.."
+          />
+
+          <label for="lname">Nom de famille</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Votre nom de famille.."
+          />
+
+          <label for="country">Pays</label>
+          <select id="country" name="country">
+            <option value="suisse">Suisse</option>
+            <option value="lichtenstein">Lichtenstein</option>
+            <option value="albanie">Albanie</option>
+            <option value="kosovo">Kosovo</option>
+            <option value="algerie">Algérie</option>
+            <option value="serbie">Serbie</option>
+            <option value="france">France</option>
+            <option value="italia">Italie</option>
+          </select>
+
+          <label for="sujet">Sujet</label>
+          <textarea
+            id="sujet"
+            name="sujet"
+            placeholder="Écrivez quelque chose.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Soumettre" />
+        </form>
+      </div>
     </main>
-
-    <footer></footer>
-
-    <div class="container">
-      <form action="/action_page.php">
-        <label for="fname">Prénom</label>
-        <input
-          type="text"
-          id="fname"
-          name="firstname"
-          placeholder="Votre prénom.."
-        />
-
-        <label for="lname">Nom de famille</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Votre nom de famille.."
-        />
-
-        <label for="country">Pays</label>
-        <select id="country" name="country">
-          <option value="suisse">Suisse</option>
-          <option value="lichtenstein">Lichtenstein</option>
-          <option value="albanie">Albanie</option>
-          <option value="kosovo">Kosovo</option>
-          <option value="algerie">Algérie</option>
-          <option value="serbie">Serbie</option>
-          <option value="france">France</option>
-        </select>
-
-        <label for="sujet">Sujet</label>
-        <textarea
-          id="sujet"
-          name="sujet"
-          placeholder="Écrivez quelque chose.."
-          style="height: 200px"
-        ></textarea>
-
-        <input type="submit" value="Soumettre" />
-      </form>
-    </div>
   </body>
 </html>
