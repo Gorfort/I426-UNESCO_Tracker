@@ -13,10 +13,16 @@
 }
 
 body {
-  background-image: url("../images/earth.jpg");
+  background-image: url("../images/earth.png");
   background-size: cover;
   overflow-y: hidden;
   overflow-x: hidden;
+}
+#logo {
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  margin-left: 20px;
 }
 
 nav {
@@ -37,23 +43,25 @@ nav {
 
 .formulaire {
   display: flex;
-  width: 20%;
 }
 
 .formulaire input {
-  height: 20%;
+  height: 40%;
   position: relative;
   margin: 20px;
-  left: -25px;
+  right: 40px;
+  text-align: center;
   top: 15px;
   bottom: 10px;
   border: 0;
 }
+/* Carte */
 .cesium-widget canvas {
   width: 100vw;
   height: 100vh;
 }
 
+/* Recherche & résultats */
 div.search-results {
   color: var(--color-white);
   position: absolute;
@@ -61,7 +69,6 @@ div.search-results {
   font-size: 10px;
   display: flex;
 }
-
 div .search-results ul li {
   display: block;
   padding: 0;
@@ -70,12 +77,12 @@ div .search-results ul li {
   cursor: pointer;
   transition: 0.1s ease;
 }
-
 div .search-results ul li:hover {
   color: var(--color-white-75p);
   transition: 0.1s ease;
 }
 
+/* Barre de recherche */
 input.cesium-geocoder-input {
   position: absolute;
   top: 120px;
@@ -132,11 +139,11 @@ input.cesium-geocoder-input:focus {
   justify-content: center;
 }
 
-ul {
+nav ul {
   list-style-type: none;
 }
 
-ul li {
+nav ul li {
   display: inline;
   margin: 100px;
 }
@@ -163,8 +170,9 @@ li a:hover {
 h1 {
   text-align: center;
   padding-top: 2%;
-  color: #0077d4;
+  color: var(--color-white);
   font-size: 1.8rem;
+  text-shadow: 1px 1px 2px var(--color-main);
 }
 
 .vertical {
@@ -176,12 +184,18 @@ h1 {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
   padding: 20px;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 2%;
-  color: #0077d4;
+  color: var(--color-white);
 }
 
 input[type="text"],
@@ -194,48 +208,60 @@ textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
+  transition: 1s ease;
 }
 
 input[type="submit"] {
-  background-color: #0077d4;
-  color: white;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
+  box-shadow: 0px 0px 4px var(--color-white);
+  color: var(--color-white-75p);
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  transition: 0.2s ease;
 }
 
-input[type="soumettre"]:hover {
-  background-color: #2387d3;
+input[type="submit"]:hover {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+main {
+  height: 100%;
+}
+.lieux {
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
+  margin: auto;
+  width: 40%;
+  padding: 30px;
+  color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px var(--color-white);
+}
+#culturel::marker {
+  color: #ffd617;
+}
+#naturel::marker {
+  color: #00c630;
+}
+main h1 {
+  margin-bottom: 20px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-footer {
-  background-color: #0077d4;
-}
-
-.v {
-  display: grid;
-  height: 850px;
-  grid-template-columns: 4% 96%;
-}
-.a {
-  background-color: #0077d4;
-}
-
-.b {
-  background-color: #0077d4;
-  padding-bottom: 2%;
-}
-#btn {
-  justify-items: center;
-  margin: 3%;
-}
-.btnend {
-  align-items: end;
+.lieux .lieux-box {
+  margin: 10px;
 }
