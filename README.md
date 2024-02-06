@@ -15,8 +15,10 @@ Discover the world of UNESCO World Heritage through our interactive website. Eas
 To keep our schedules, we use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#/project) a website that manages all kind of Scrum Methodology Project.
 
 ## Web Mock-Ups 🏞️
-
-**Thibaud** _(Gorfort)_ was asked if he could do the web-mockups considering that he's good with everything creative related.
+<a href="https://github.com/Gorfort/ConvertFlowAPI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Gorfort/ConvertFlowAPI" height="30" width="30"/>
+</a><br>
+**Thibaud** _(gorfort)_ was asked if he could do the web-mockups considering that he's good with everything creative related.
 
 ## Website Front-End 🖥️
 <a href="https://github.com/mateja-velickovic/nodejs-snakeGame/contributors">
@@ -40,7 +42,7 @@ Front-End is mainly made by **Mateja** _(mateja-velickovic)_, **Yohan** _(yohcar
   <img src="https://contrib.rocks/image?repo=estebanstb/P_Soutien_239" height="30" width="30"/>
 </a>
 <br>
- Back-End is mainly made by **Quentin** _(quemet)_.
+ Back-End is mainly made by **Quentin** _(quemet)_ and **Esteban** _(estebanstb)_.
 
 
 ## Product Goal 🚩
