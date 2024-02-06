@@ -22,11 +22,18 @@
         return $req;
     }
 
-    public function getAllDatas(){
+    public function getAllUnescoSite(){
         $query = "SELECT * FROM t_site_unesco";
         $req = $this->querySimpleExecute($query);
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
         return $datas;
+    }
+
+    public function getAllUser() {
+     $query = "SELECT * FROM t_user";
+     $req = $this->querySimpleExecute($query);
+     $datas = $req->fetchAll(PDO::FETCH_ASSOC);
+     return $datas;
     }
  }
 ?>
