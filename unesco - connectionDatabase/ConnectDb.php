@@ -8,7 +8,7 @@
 
         try
         {
-            $connector = new PDO('mysql:host=localhost;dbname=dbdurabilite;charset=utf8', 'root', 'root');
+            $connector = new PDO('mysql:host=localhost;dbname=db_unesco;charset=utf8', 'root', 'root');
         }
         catch (PDOException $e)
         {
@@ -35,5 +35,12 @@
      $datas = $req->fetchAll(PDO::FETCH_ASSOC);
      return $datas;
     }
+
+  public function getOneUser(var user_id) {
+     $query = "SELECT * FROM t_user WHERE t_user.id=" . user_id . ";";
+     $req = $this->querySimpleExecute($query);
+     $datas = $req->fetchAll(PDO::FETCH_ASSOC);
+     return $datas;
+  }
  }
 ?>
