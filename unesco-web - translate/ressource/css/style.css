@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+:root {
+  --color-main: #890089;
+  --color-main-s: #3692d8;
+  --color-white: #ffffff;
+  --color-white-75p: #ffffffa2;
+}
+
+body {
+  background-image: url("../images/earth.jpg");
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+nav {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
+  width: 100%;
+}
+
+.formulaire {
+  display: flex;
+  width: 20%;
+}
+
+.formulaire input {
+  height: 20%;
+  position: relative;
+  margin: 20px;
+  left: -25px;
+  top: 15px;
+  bottom: 10px;
+  border: 0;
+}
+.cesium-widget canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+div.search-results {
+  color: var(--color-white);
+  position: absolute;
+  top: 170px;
+  font-size: 10px;
+  display: flex;
+}
+
+div .search-results ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+div .search-results ul li:hover {
+  color: var(--color-white-75p);
+  transition: 0.1s ease;
+}
+
+input.cesium-geocoder-input {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+.searchtext {
+  color: var(--color-white);
+  position: absolute;
+  top: 95px;
+  left: 40px;
+  text-shadow: 1px 1px 2px var(--color-main);
+}
+input.cesium-geocoder-input::placeholder {
+  color: transparent;
+}
+input.cesium-geocoder-input:focus {
+  outline: none;
+}
+
+.formulaire input:focus {
+  outline: none;
+}
+
+.formulaire a {
+  background-color: var(--color-white);
+  padding: 10px;
+  text-decoration: none;
+  color: var(--color-main);
+  transition: 0.1s ease;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.formulaire a:hover {
+  transition: 0.1s ease;
+}
+
+.liens {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline;
+  margin: 100px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--color-white);
+  transition: 0.1s ease;
+}
+
+li a:hover {
+  color: var(--color-white-75p);
+  transition: 0.1s ease;
+}
+
+#active {
+  font-weight: bold;
+}
+
+#active:hover {
+  color: var(--color-white);
+}
+
+h1 {
+  text-align: center;
+  padding-top: 2%;
+  color: #0077d4;
+  font-size: 1.8rem;
+}
+
+.vertical {
+  background-color: var(--color-main-s);
+  width: 7%;
+  height: 100%;
+  padding-bottom: 100%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+  color: #0077d4;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #0077d4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="soumettre"]:hover {
+  background-color: #2387d3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #0077d4;
+}
+
+.v {
+  display: grid;
+  height: 850px;
+  grid-template-columns: 4% 96%;
+}
+.a {
+  background-color: #0077d4;
+}
+
+.b {
+  background-color: #0077d4;
+  padding-bottom: 2%;
+}
+#btn {
+  justify-items: center;
+  margin: 3%;
+}
+.btnend {
+  align-items: end;
+}
