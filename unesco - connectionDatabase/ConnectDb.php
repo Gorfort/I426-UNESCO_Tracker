@@ -56,11 +56,17 @@
         return $datas;
     }
 
-    public function createUser($username, $password {
+    public function insertUser($username, $password {
         $query = "INSERT INTO t_user(username, password) VALUES (" . $username . ", " . $password . ");";
         $req = $this->querySimpleExecute($query);
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
         return $datas;
+    }
+
+    public function deleteUser($user_id) {
+        $query = "DELETE FROM t_user WHERE user_id=" . $user_id . ";";
+        $req = $this->querySimpleExecute($query);
+        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
     }
  }
 ?>
