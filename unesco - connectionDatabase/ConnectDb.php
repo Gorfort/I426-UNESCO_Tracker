@@ -21,8 +21,8 @@
         return $req;
     }
 
-    public function getOneUnescoSite(var site_id) {
-        $query = "SELECT * FROM t_site_unesco WHERE id_site_unesco=" . site_id . ";";
+    public function getOneUnescoSite($site_id) {
+        $query = "SELECT * FROM t_site_unesco WHERE id_site_unesco=" . $site_id . ";";
         $req = $this->querySimpleExecute($query);
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
         return $datas;
@@ -42,11 +42,18 @@
         return $datas;
     }
 
-  public function getOneUser(var user_id) {
-       $query = "SELECT * FROM t_user WHERE t_user.id=" . user_id . ";";
+    public function getOneUser($user_id) {
+       $query = "SELECT * FROM t_user WHERE t_user.id=" . $user_id . ";";
        $req = $this->querySimpleExecute($query);
        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
        return $datas;
-  }
+    }
+
+    public function getUserHistory($user_id) {
+        $query = "SELECT * FROM t_history WHERE fk_user=" . $user_id . ";";
+        $req = $this->querySimpleExecute($query);
+        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
+        return $datas;
+    }
  }
 ?>
