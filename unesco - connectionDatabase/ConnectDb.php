@@ -17,12 +17,18 @@
     }
 
     private function querySimpleExecute($query){
-
         $req = $this->connector->query($query);
         return $req;
     }
 
-    public function getAllUnescoSite(){
+    public function getOneUnescoSite(var site_id) {
+        $query = "SELECT * FROM t_site_unesco WHERE id_site_unesco=" . site_id . ";";
+        $req = $this->querySimpleExecute($query);
+        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
+        return $datas;
+    }
+
+    public function getAllUnescoSite() {
         $query = "SELECT * FROM t_site_unesco";
         $req = $this->querySimpleExecute($query);
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
@@ -30,17 +36,17 @@
     }
 
     public function getAllUser() {
-     $query = "SELECT * FROM t_user";
-     $req = $this->querySimpleExecute($query);
-     $datas = $req->fetchAll(PDO::FETCH_ASSOC);
-     return $datas;
+        $query = "SELECT * FROM t_user";
+        $req = $this->querySimpleExecute($query);
+        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
+        return $datas;
     }
 
   public function getOneUser(var user_id) {
-     $query = "SELECT * FROM t_user WHERE t_user.id=" . user_id . ";";
-     $req = $this->querySimpleExecute($query);
-     $datas = $req->fetchAll(PDO::FETCH_ASSOC);
-     return $datas;
+       $query = "SELECT * FROM t_user WHERE t_user.id=" . user_id . ";";
+       $req = $this->querySimpleExecute($query);
+       $datas = $req->fetchALL(PDO::FETCH_ASSOC);
+       return $datas;
   }
  }
 ?>
