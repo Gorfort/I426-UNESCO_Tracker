@@ -19,13 +19,27 @@ To keep our schedules, we use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#
 **Thibaud** _(Gorfort)_ was asked if he could do the web-mockups considering that he's good with everything creative related.
 
 ## Website Front-End 🖥️
+<a href="https://github.com/mateja-velickovic/nodejs-snakeGame/contributors">
+  <img src="https://contrib.rocks/image?repo=mateja-velickovic/nodejs-snakeGame" height="30" width="30"/>
+</a>
+<a href="https://github.com/zeqamir/P_Script122/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zeqamir/P_Script122" height="30" width="30"/>
+</a>
+<a href="https://github.com/yohcard/POO-yohan-Cardis/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yohcard/POO-yohan-Cardis" height="30" width="30"/>
+</a>
+<br>
 
 Front-End is mainly made by **Mateja** _(mateja-velickovic)_, **Yohan** _(yohcard)_ and **Amir** _(AmirZeqiri05)_.
 
 ## Website Back-End ⚙️
 <a href="https://github.com/quemet/P_BULLE_JS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=quemet/P_BULLE_JS" height="30" width="30"/>
-</a><br>
+</a>
+<a href="https://github.com/estebanstb/P_Soutien_239/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=estebanstb/P_Soutien_239" height="30" width="30"/>
+</a>
+<br>
  Back-End is mainly made by **Quentin** _(quemet)_.
 
 
