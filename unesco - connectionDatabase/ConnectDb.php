@@ -55,5 +55,12 @@
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
         return $datas;
     }
+
+    public function createUser($username, $password {
+        $query = "INSERT INTO t_user(username, password) VALUES (" . $username . ", " . $password . ");";
+        $req = $this->querySimpleExecute($query);
+        $datas = $req->fetchALL(PDO::FETCH_ASSOC);
+        return $datas;
+    }
  }
 ?>
