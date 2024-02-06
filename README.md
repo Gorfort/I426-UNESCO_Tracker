@@ -17,9 +17,12 @@ To keep our schedules, we use [IceScrum](https://etml.icescrum.com/p/426UNESCO/#
 ## Web Mock-Ups 🏞️
 <a href="https://github.com/Gorfort/ConvertFlowAPI/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Gorfort/ConvertFlowAPI" height="30" width="30"/>
+</a>
+<a href="https://github.com/darchasi/demoPoo/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=darchasi/demoPoo" height="30" width="30"/>
 </a><br>
 
-**Thibaud** _(gorfort)_ was asked if he could do the web-mockups considering that he's good with everything creative related.
+**Thibaud** _(gorfort)_ and **Dario** _(darchasi)_ take care of models, mockups and all aspects of design.
 
 ## Website Front-End 🖥️
 <a href="https://github.com/mateja-velickovic/nodejs-snakeGame/contributors">
