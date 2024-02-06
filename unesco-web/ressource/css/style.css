@@ -22,10 +22,16 @@ body {
 nav {
   text-align: center;
   font-size: 1.3rem;
-  background-color: var(--color-main);
   margin: auto;
   display: flex;
   flex-direction: row-reverse;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
   width: 100%;
 }
 
@@ -44,7 +50,63 @@ nav {
   border: 0;
 }
 .cesium-widget canvas {
+  width: 100vw;
+  height: 100vh;
 }
+
+div.search-results {
+  color: var(--color-white);
+  position: absolute;
+  top: 170px;
+  font-size: 10px;
+  display: flex;
+}
+
+div .search-results ul li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+div .search-results ul li:hover {
+  color: var(--color-white-75p);
+  transition: 0.1s ease;
+}
+
+input.cesium-geocoder-input {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  background: rgb(83, 45, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(83, 45, 132, 1) 0%,
+    rgba(126, 78, 172, 1) 50%,
+    rgba(83, 45, 132, 1) 100%
+  );
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+.searchtext {
+  color: var(--color-white);
+  position: absolute;
+  top: 95px;
+  left: 40px;
+  text-shadow: 1px 1px 2px var(--color-main);
+}
+input.cesium-geocoder-input::placeholder {
+  color: transparent;
+}
+input.cesium-geocoder-input:focus {
+  outline: none;
+}
+
 .formulaire input:focus {
   outline: none;
 }
@@ -60,8 +122,6 @@ nav {
 }
 
 .formulaire a:hover {
-  color: var(--color-white);
-  background-color: var(--color-main);
   transition: 0.1s ease;
 }
 
