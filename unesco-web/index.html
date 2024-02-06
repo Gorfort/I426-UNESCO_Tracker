@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ressource/css/style.css" />
-<script src="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Cesium.js"></script>
-<style>
-        #cesiumContainer {
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-</style>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Cesium.js"></script>
+    <style>
+      #cesiumContainer {
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
     <title>UNESCO - Accueil</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
       <div class="formulaire">
         <input type="text" id="name" name="name" placeholder="Adresse-mail" />
         <input type="text" id="name" name="name" placeholder="Mot de passe" />
-        <a href="#">></a>
+        <a type="submit" href="#">></a>
       </div>
       <div class="liens">
         <ul>
@@ -31,33 +31,17 @@
     </nav>
 
     <div id="cesiumContainer"></div>
- 
+    <p class="searchtext">Effectuez votre recherche !</p>
     <script>
-        // Grant CesiumJS access to your ion assets
-        Cesium.Ion.defaultAccessToken =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OWI1YWQxMC0wMWNiLTQ5ZWUtOWFjMC0zN2I2ZGQyNGNkYTYiLCJpZCI6MTkyODU2LCJpYXQiOjE3MDY2MTYwMjR9.HiUeEcEKCKiGbh3ltdTA0c9hVS9dMuulLkCK78aB3YI";
- 
-        // Créer une instance de Cesium.Viewer sans géocodeur
+      // Grant CesiumJS access to your ion assets
+      Cesium.Ion.defaultAccessToken =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OWI1YWQxMC0wMWNiLTQ5ZWUtOWFjMC0zN2I2ZGQyNGNkYTYiLCJpZCI6MTkyODU2LCJpYXQiOjE3MDY2MTYwMjR9.HiUeEcEKCKiGbh3ltdTA0c9hVS9dMuulLkCK78aB3YI";
 
-        const viewer = new Cesium.Viewer("cesiumContainer", {
+      // Créer une instance de Cesium.Viewer sans géocodeur
 
+      const viewer = new Cesium.Viewer("cesiumContainer", {
         position: Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
       });
-</script>
+    </script>
   </body>
 </html>
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carte Interactive</title>
-
-</head>
-<body>
-
-</body>
-</html>
- 
