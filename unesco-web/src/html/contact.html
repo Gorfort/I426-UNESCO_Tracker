@@ -8,11 +8,18 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="../../index.html">PATRIMOINE</a></li>
-        <li><a href="lieuVisite.html">LIEUX VISITÉS</a></li>
-        <li><a href="" id="active">NOUS CONTACTER</a></li>
-      </ul>
+      <div class="formulaire">
+        <input type="text" id="name" name="name" placeholder="Adresse-mail" />
+        <input type="text" id="name" name="name" placeholder="Mot de passe" />
+        <a href="#">></a>
+      </div>
+      <div class="liens">
+        <ul>
+          <li><a href="../../index.html">PATRIMOINE</a></li>
+          <li><a href="lieuVisite.html">LIEUX VISITÉS</a></li>
+          <li><a id="active" href="">NOUS CONTACTER</a></li>
+        </ul>
+      </div>
     </nav>
 
     <main>
@@ -58,7 +65,7 @@
           style="height: 200px"
         ></textarea>
 
-        <input type="soumettre" value="Soumettre" />
+        <input type="submit" value="Soumettre" />
       </form>
     </div>
   </body>

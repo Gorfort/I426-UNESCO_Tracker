@@ -4,26 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ressource/css/style.css" />
-
+<script src="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Cesium.js"></script>
+<style>
+        #cesiumContainer {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+</style>
     <title>UNESCO - Accueil</title>
   </head>
   <body>
-    <header></header>
-
     <nav>
-      <ul>
-        <li><a href="" id="active">PATRIMOINE</a></li>
-        <li><a href="src/html/lieuVisite.html">LIEUX VISITÉS</a></li>
-        <li><a href="src/html/contact.html">NOUS CONTACTER</a></li>
-      </ul>
+      <div class="formulaire">
+        <input type="text" id="name" name="name" placeholder="Adresse-mail" />
+        <input type="text" id="name" name="name" placeholder="Mot de passe" />
+        <a href="#">></a>
+      </div>
+      <div class="liens">
+        <ul>
+          <li><a href="" id="active">PATRIMOINE</a></li>
+          <li><a href="src/html/lieuVisite.html">LIEUX VISITÉS</a></li>
+          <li><a href="src/html/contact.html">NOUS CONTACTER</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <script src="https://js.arcgis.com/4.18"></script>
+    <div id="cesiumContainer"></div>
+ 
+    <script>
+        // Grant CesiumJS access to your ion assets
+        Cesium.Ion.defaultAccessToken =
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OWI1YWQxMC0wMWNiLTQ5ZWUtOWFjMC0zN2I2ZGQyNGNkYTYiLCJpZCI6MTkyODU2LCJpYXQiOjE3MDY2MTYwMjR9.HiUeEcEKCKiGbh3ltdTA0c9hVS9dMuulLkCK78aB3YI";
+ 
+        // Créer une instance de Cesium.Viewer sans géocodeur
 
-    <main class="vertical">
-      <p>O</p>
-      <p>O</p>
-      <p>O</p>
-    </main>
+        const viewer = new Cesium.Viewer("cesiumContainer", {
+
+        position: Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
+      });
+</script>
   </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte Interactive</title>
+
+</head>
+<body>
+
+</body>
+</html>
+ 
