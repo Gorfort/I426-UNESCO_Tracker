@@ -8,7 +8,8 @@
 
         try
         {
-            $connector = new PDO('mysql:host=localhost;dbname=db_unesco;charset=utf8', 'root', 'root');
+            $connection = 'mysql:host=localhost;dbname=dbdurabilite;charset=utf8', 'root', 'root';
+            $this->connector = new PDO($connection);
         }
         catch (PDOException $e)
         {
