@@ -16,7 +16,7 @@
   </head>
   <body>
     <nav>
-      <form class="formulaire" method="get" action="src/php/database.php">
+      <form class="formulaire" method="get" action="./src/php/database.php">
         <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
         <input
           type="password"
