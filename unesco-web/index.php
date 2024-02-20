@@ -16,16 +16,21 @@
   </head>
   <body>
     <nav>
-      <div class="formulaire">
-        <input type="text" id="name" name="name" placeholder="Adresse-mail" />
-        <input type="text" id="name" name="name" placeholder="Mot de passe" />
-        <a type="submit" href="#">></a>
-      </div>
+      <form class="formulaire" method="get" action="src/php/database.php">
+        <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Mot de passe"
+        />
+        <input type="submit" name="submit" id="submit" value=">">
+      </form>
       <div class="liens">
         <ul>
           <li><a href="" id="active">PATRIMOINE</a></li>
-          <li><a href="src/html/lieuVisite.html">LIEUX VISITÉS</a></li>
-          <li><a href="src/html/contact.html">NOUS CONTACTER</a></li>
+          <li><a href="src/html/lieuVisite.php">LIEUX VISITÉS</a></li>
+          <li><a href="src/html/contact.php">NOUS CONTACTER</a></li>
         </ul>
       </div>
       <img id="logo" src="ressource/images/logoUNESCO.png" alt="" />

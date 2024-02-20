@@ -15,8 +15,8 @@
       </div>
       <div class="liens">
         <ul>
-          <li><a href="../../index.html">PATRIMOINE</a></li>
-          <li><a href="lieuVisite.html">LIEUX VISITÉS</a></li>
+          <li><a href="../../index.php">PATRIMOINE</a></li>
+          <li><a href="lieuVisite.php">LIEUX VISITÉS</a></li>
           <li><a id="active" href="">NOUS CONTACTER</a></li>
         </ul>
       </div>
@@ -36,12 +36,12 @@
             placeholder="Votre prénom.."
           />
 
-          <label for="lname">Nom de famille</label>
+          <label for="lname">Adresse email</label>
           <input
             type="text"
             id="lname"
             name="lastname"
-            placeholder="Votre nom de famille.."
+            placeholder="example@gmail.com"
           />
 
           <label for="country">Pays</label>

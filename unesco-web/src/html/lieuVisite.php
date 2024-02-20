@@ -15,9 +15,9 @@
       </div>
       <div class="liens">
         <ul>
-          <li><a href="../../index.html">PATRIMOINE</a></li>
-          <li><a id="active" href="lieuVisite.html">LIEUX VISITÉS</a></li>
-          <li><a href="contact.html">NOUS CONTACTER</a></li>
+          <li><a href="../../index.php">PATRIMOINE</a></li>
+          <li><a id="active" href="lieuVisite.php">LIEUX VISITÉS</a></li>
+          <li><a href="contact.php">NOUS CONTACTER</a></li>
         </ul>
       </div>
       <img id="logo" src="../../ressource/images/logoUNESCO.png" alt="" />

@@ -199,6 +199,7 @@ h1 {
 }
 
 input[type="text"],
+input[type="password"],
 select,
 textarea {
   width: 100%;
@@ -211,29 +212,18 @@ textarea {
   transition: 1s ease;
 }
 
-input[type="submit"] {
+input[value=">"] {
   background: rgb(83, 45, 132);
-  background: linear-gradient(
-    90deg,
-    rgba(83, 45, 132, 1) 0%,
-    rgba(126, 78, 172, 1) 50%,
-    rgba(83, 45, 132, 1) 100%
-  );
-  box-shadow: 0px 0px 4px var(--color-white);
+  font-size: 1rem;
   color: var(--color-white-75p);
-  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   text-align: center;
   transition: 0.2s ease;
+  position: relative;
+  top: 0px;
 }
 
-input[type="submit"]:hover {
-  color: var(--color-white);
-  font-size: 0.9rem;
-  transition: 0.2s ease;
-}
 main {
   height: 100%;
 }
