@@ -39,6 +39,7 @@
 
     <!-- Informations affichées lors du click sur un poimt -->
     <div class="placeInformations">
+        <img id="placeImage" src="" alt="Image du lieu sélectionné">
         <p class="placeCountry"></p>
         <p class="placeDescription"></p>
     </div>
@@ -119,9 +120,12 @@
     // Éléments HTML pour afficher les informations sur le lieu
     var placeInformations = document.querySelector(".placeInformations");
     var placeCountry = document.querySelector(".placeCountry");
-    var placeNameElement = document.querySelector(".placeName");
     var placeDescription = document.querySelector(".placeDescription");
-    var placeCategory = document.querySelector(".placeCategory");
+    var imageElement = document.getElementById('placeImage');
+
+    // Update the image source
+    imageElement.src = "<?php echo $position['image'] ?>";
+
 
     // Gérer l'événement click pour afficher les données personnalisées
     viewer.screenSpaceEventHandler.setInputAction(function onClick(movement) {
@@ -132,8 +136,7 @@
             var customData = pickedObject.id.customData;
 
             // Mettre à jour le texte des éléments HTML avec les données personnalisées
-            placeCountry.textContent = customData.country + " - " +
-                customData.placename;
+            placeCountry.textContent = customData.country + " - " + customData.placename;
             placeDescription.textContent = customData.description;
 
 
@@ -141,7 +144,6 @@
             // Afficher l'élément HTML
             placeInformations.style.display = "block";
         } else {
-
             // Aucun objet sélectionné, masquer l'élément HTML
             placeInformations.style.display = "none";
         }
