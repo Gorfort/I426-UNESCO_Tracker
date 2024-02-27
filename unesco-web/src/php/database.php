@@ -1,24 +1,18 @@
 <?php
-try {
-    $conn = new PDO("mysql:host=localhost;dbname=db_unesco", $_GET["mail"], $_GET["password"]);
-    header("Location: ../../index.php");
-} catch(PDOException $e) {
-    echo "The username or the password is incorrect. Try Again";
-    sleep(10);
-    header("Location: ../../index.php");
-}
+
  class Database {
     private $connector;
     private $connection;
 
-    public function __construct() {
-        echo $_GET["mail"];
+    public function __construct(){
         try {
             $conn = new PDO("mysql:host=localhost;dbname=db_unesco", $_GET["mail"], $_GET["password"]);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Connected successfully";
-        } catch(PDOException $e) {
-            dir("Connection failed: " . $e->getMessage());
-        }
+          } catch(PDOException $e) {
+            dir ("Connection failed: " . $e->getMessage());
+          }
     }
 
     private function querySimpleExecute($query){
@@ -74,4 +68,5 @@ try {
         $datas = $req->fetchALL(PDO::FETCH_ASSOC);
     }
  }
+// header("Location: ../../index.php");
 ?>

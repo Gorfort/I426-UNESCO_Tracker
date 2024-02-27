@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ressource/css/style.css" />
     <script src="https://cesium.com/downloads/cesiumjs/releases/1.91/Build/Cesium/Cesium.js"></script>
     <style>
-      #cesiumContainer {
-        height: 100vh;
-        margin: 0;
-        overflow: hidden;
-      }
+
     </style>
     <title>UNESCO - Accueil</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <!-- Barre de navigation -->
     <nav>
-      <form class="formulaire" method="get" action="./src/php/database.php">
-        <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Mot de passe"
-        />
-        <input type="submit" name="submit" id="submit" value=">">
-      </form>
-      <div class="liens">
-        <ul>
-          <li><a href="" id="active">PATRIMOINE</a></li>
-          <li><a href="src/html/lieuVisite.php">LIEUX VISITÉS</a></li>
-          <li><a href="src/html/contact.php">NOUS CONTACTER</a></li>
-        </ul>
-      </div>
-      <img id="logo" src="ressource/images/logoUNESCO.png" alt="" />
+        <form class="formulaire" method="get" action="src/php/database.php">
+            <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
+            <input type="password" id="password" name="password" placeholder="Mot de passe" />
+            <input type="submit" name="submit" id="submit" value=">" />
+        </form>
+        <div class="liens">
+            <ul>
+                <li><a href="" id="active">CARTE DES PATRIMOINES</a></li>
+                <li><a href="src/html/lieuVisite.php">LIEUX DE L'UNESCO</a></li>
+                <li><a href="src/html/contact.php">NOUS CONTACTER</a></li>
+            </ul>
+        </div>
+        <img id="logo" src="ressource/images/logoUNESCO.png" alt="" />
     </nav>
 
+    <!-- Barre de recherche de lieux -->
+    <p class="searchtext">
+        Effectuez votre recherche :
+    </p>
+
     <div id="cesiumContainer"></div>
-    <p class="searchtext">Effectuez votre recherche !</p>
+
+    <!-- Informations affichées lors du click sur un poimt -->
+    <div class="placeInformations">
+        <p class="placeCountry"></p>
+        <p class="placeDescription"></p>
+    </div>
+
+    <!-- Légende pour les couleurs des points -->
+    <div class="colors">
+        <p>Lieu naturel 🟢</p>
+        <p>Lieu culturel 🟡</p>
+        <p>Mixte des deux 🟠</p>
+    </div>
+
+    <!-- Token d'accès -->
     <script>
-      // Grant CesiumJS access to your ion assets
-      Cesium.Ion.defaultAccessToken =
+    Cesium.Ion.defaultAccessToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5OWI1YWQxMC0wMWNiLTQ5ZWUtOWFjMC0zN2I2ZGQyNGNkYTYiLCJpZCI6MTkyODU2LCJpYXQiOjE3MDY2MTYwMjR9.HiUeEcEKCKiGbh3ltdTA0c9hVS9dMuulLkCK78aB3YI";
 
-      // Créer une instance de Cesium.Viewer sans géocodeur
-
-      const viewer = new Cesium.Viewer("cesiumContainer", {
+    // Affichage de la carte  
+    var viewer = new Cesium.Viewer("cesiumContainer", {
         animation: false,
         baseLayerPicker: false,
         fullscreenButton: false,
@@ -54,7 +65,89 @@
         sceneModePicker: false,
         selectionIndicator: false,
         timeline: false,
-      });
+    });
+
+
+    // Connexion à la base de données et récupération de la table t_site_unesco
+    <?php
+    $pdo = new PDO("mysql:host=localhost;dbname=db_unesco;charset=utf8", "root", "root");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $t_site_unesco = $pdo->query("SELECT * FROM t_site_unesco");
+    $result = $t_site_unesco->fetchAll(PDO::FETCH_ASSOC);
+
+    ?>
+
+    // Tableau de points
+    var entities = [];
+
+    // Boucle foreach qui affichera tous les points avec leurs informations
+    <?php
+    foreach ($result as $position) {
+    ?>
+
+    var entity = viewer.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(
+            <?php echo $position['longitutude'] ?>,
+            <?php echo $position['latitude'] ?>
+        ),
+        customData: {
+            country: "<?php echo $position['states_name'] ?>",
+            placename: "<?php echo $position['name'] ?>",
+            description: "<?php echo $position['short_description'] ?>",
+        },
+        point: {
+            pixelSize: 10,
+            color: <?php
+        if ($position['category'] == "Cultural") {
+            echo "Cesium.Color.YELLOW";
+        } elseif($position['category'] == "Natural") {
+            echo "Cesium.Color.LAWNGREEN ";}
+            else {
+                echo "Cesium.Color.DARKORANGE";
+            }
+    ?>,
+
+        },
+    });
+
+    entities.push(entity); // Ajouter l'entité à la liste
+    <?php
+    }
+    ?>
+
+    // Éléments HTML pour afficher les informations sur le lieu
+    var placeInformations = document.querySelector(".placeInformations");
+    var placeCountry = document.querySelector(".placeCountry");
+    var placeNameElement = document.querySelector(".placeName");
+    var placeDescription = document.querySelector(".placeDescription");
+    var placeCategory = document.querySelector(".placeCategory");
+
+    // Gérer l'événement click pour afficher les données personnalisées
+    viewer.screenSpaceEventHandler.setInputAction(function onClick(movement) {
+        var pickedObject = viewer.scene.pick(movement.position);
+
+        if (Cesium.defined(pickedObject) && entities.includes(pickedObject.id)) {
+            // Récupérer les données personnalisées de l'entité
+            var customData = pickedObject.id.customData;
+
+            // Mettre à jour le texte des éléments HTML avec les données personnalisées
+            placeCountry.textContent = customData.country + " - " +
+                customData.placename;
+            placeDescription.textContent = customData.description;
+
+
+
+            // Afficher l'élément HTML
+            placeInformations.style.display = "block";
+        } else {
+
+            // Aucun objet sélectionné, masquer l'élément HTML
+            placeInformations.style.display = "none";
+        }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
     </script>
-  </body>
+
+</body>
+
 </html>
