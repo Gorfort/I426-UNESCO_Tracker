@@ -157,8 +157,9 @@ input.cesium-geocoder-input {
   left: 40px;
   text-shadow: 1px 1px 2px var(--color-main);
 }
+
 input.cesium-geocoder-input::placeholder {
-  color: transparent;
+  color: var(--color-white);
 }
 input.cesium-geocoder-input:focus {
   outline: none;

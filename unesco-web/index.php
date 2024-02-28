@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php $lang="en"?>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,15 +16,55 @@
     <!-- Barre de navigation -->
     <nav>
         <form class="formulaire" method="get" action="src/php/database.php">
-            <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
-            <input type="password" id="password" name="password" placeholder="Mot de passe" />
+            <input type="text" id="mail" name="mail" placeholder="<?php
+                 if ("$lang" == "fr") {
+                     echo "Adresse-mail";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Mail address";
+                 }
+                ?>" />
+            <input type="password" id="password" name="password" placeholder="<?php
+                 if ("$lang" == "fr") {
+                     echo "Mot de passe";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Password";
+                 }
+                ?>" />
             <input type="submit" name="submit" id="submit" value=">" />
         </form>
         <div class="liens">
             <ul>
-                <li><a href="" id="active">CARTE DES PATRIMOINES</a></li>
-                <li><a href="src/html/lieuVisite.php">LIEUX DE L'UNESCO</a></li>
-                <li><a href="src/html/contact.php">NOUS CONTACTER</a></li>
+                <li><a href="" id="active">
+                 <?php
+                 if ("$lang" == "fr") {
+                     echo "CARTE DES PATRIMOINES";
+                 }
+                 if ("$lang" == "en") {
+                    echo "HERITAGE MAP";
+                 }
+                ?>
+             </a></li>
+                <li><a href="src/html/lieuVisite.php">
+                <?php
+                 if ("$lang" == "fr") {
+                     echo "LIEUX DE L'UNESCO";
+                 }
+                 if ("$lang" == "en") {
+                    echo "UNESCO PLACES";
+                 }
+                ?>
+                </a></li>
+                <li><a href="src/html/contact.php">
+                <?php
+                 if ("$lang" == "fr") {
+                     echo "NOUS CONTACTER";
+                 }
+                 if ("$lang" == "en") {
+                    echo "CONTACT US";
+                 }
+                ?></a></li>
             </ul>
         </div>
         <img id="logo" src="ressource/images/logoUNESCO.png" alt="" />
@@ -32,7 +72,15 @@
 
     <!-- Barre de recherche de lieux -->
     <p class="searchtext">
-        Effectuez votre recherche :
+    <?php
+                 if ("$lang" == "fr") {
+                     echo "Effectuez votre recherche :";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Do your search :";
+                 }
+                ?>
+                
     </p>
 
     <div id="cesiumContainer"></div>
@@ -46,9 +94,36 @@
 
     <!-- Légende pour les couleurs des points -->
     <div class="colors">
-        <p>Lieu naturel 🟢</p>
-        <p>Lieu culturel 🟡</p>
-        <p>Mixte des deux 🟠</p>
+        <p>
+        <?php
+                 if ("$lang" == "fr") {
+                     echo "Lieu naturel 🟢";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Natural place 🟢";
+                 }
+                ?>
+        </p>
+        <p>
+        <?php
+                 if ("$lang" == "fr") {
+                     echo "Lieu culturel 🟡";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Cultural place 🟡";
+                 }
+                ?>
+                </p>
+        <p>       
+        <?php
+                 if ("$lang" == "fr") {
+                     echo "Mixte des deux 🟠";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Mixed of both 🟠";
+                 }
+                ?>
+                </p>
     </div>
 
     <!-- Token d'accès -->
