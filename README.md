@@ -54,7 +54,16 @@ Back-End is mainly made by **Quentin** _(quemet)_ and **Esteban** _(estebanstb)_
 ## Product Goal 🚩
 Create an interactive website enabling users to explore and follow UNESCO World Heritage sites displayed on an interactive map. This online platform enables users to tag sites they have already visited, providing an immersive experience for discovering and exploring UNESCO World Heritage and should look like this.<br>
 
+<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/slide1.png" alt="Example" height="300">
+
+<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/list.png" alt="Example" height="300">
+
+<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/discover.png" alt="Example" height="300">
+
+## Interface
 <p align="center">
-<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/example.png" alt="Example" height="500">
+<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/InterfaceExample.png" alt="Example" height="500">
+
+<img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/InterfaceList.png" alt="Example" height="500">
 </p>
 
