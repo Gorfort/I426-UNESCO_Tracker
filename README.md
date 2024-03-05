@@ -61,7 +61,7 @@ Create an interactive website enabling users to explore and follow UNESCO World 
 <img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/discover.png" alt="Example" height="300">
 
 ## Interface
-<p align="center">
+
 <img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/InterfaceExample.png" alt="Example" height="500">
 
 <img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/InterfaceList.png" alt="Example" height="500">
