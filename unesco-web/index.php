@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php $lang="en"?>
+<?php $lang="fr"?>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -171,6 +171,7 @@
             country: "<?php echo $position['states_name'] ?>",
             placename: "<?php echo $position['name'] ?>",
             description: "<?php echo $position['short_description'] ?>",
+            image: "<?php echo $position['image'] ?>",
         },
         point: {
             pixelSize: 10,
@@ -199,8 +200,6 @@
     var imageElement = document.getElementById('placeImage');
 
     // Update the image source
-    imageElement.src = "<?php echo $position['image'] ?>";
-
 
     // Gérer l'événement click pour afficher les données personnalisées
     viewer.screenSpaceEventHandler.setInputAction(function onClick(movement) {
@@ -213,6 +212,8 @@
             // Mettre à jour le texte des éléments HTML avec les données personnalisées
             placeCountry.textContent = customData.country + " - " + customData.placename;
             placeDescription.textContent = customData.description;
+            imageElement.src = "asd";
+            imageElement.src = customData.image;
 
 
 
