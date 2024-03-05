@@ -12,6 +12,7 @@
     <title>UNESCO - Accueil</title>
 </head>
 
+
 <body>
     <!-- Barre de navigation -->
     <nav>
@@ -36,7 +37,7 @@
         </form>
         <div class="liens">
             <ul>
-                <li><a href="" id="active">
+                <li><a  id="active">
                  <?php
                  if ("$lang" == "fr") {
                      echo "CARTE DES PATRIMOINES";
@@ -67,11 +68,11 @@
                 ?></a></li>
             </ul>
         </div>
-        <img id="logo" src="ressource/images/logoUNESCO.png" alt="" />
+        <a href=""><img id="logo" src="ressource/images/logoUNESCO.png" alt="" /></a>
     </nav>
 
     <!-- Barre de recherche de lieux -->
-    <p class="searchtext">
+    <p class="searchtext" >
     <?php
                  if ("$lang" == "fr") {
                      echo "Effectuez votre recherche :";
@@ -198,8 +199,6 @@
     var placeCountry = document.querySelector(".placeCountry");
     var placeDescription = document.querySelector(".placeDescription");
     var imageElement = document.getElementById('placeImage');
-
-    // Update the image source
 
     // Gérer l'événement click pour afficher les données personnalisées
     viewer.screenSpaceEventHandler.setInputAction(function onClick(movement) {

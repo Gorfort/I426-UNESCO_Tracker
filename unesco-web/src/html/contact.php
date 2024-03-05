@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php $lang="fr"?>
 
 <head>
     <meta charset="UTF-8" />
@@ -9,22 +10,63 @@
 </head>
 
 <body>
-    <!-- Barre de navigation -->
+ <!-- Barre de navigation -->
     <nav>
         <form class="formulaire" method="get" action="src/php/database.php">
-            <input type="text" id="mail" name="mail" placeholder="Adresse-mail" />
-            <input type="password" id="password" name="password" placeholder="Mot de passe" />
+            <input type="text" id="mail" name="mail" placeholder="<?php
+                 if ("$lang" == "fr") {
+                     echo "Adresse-mail";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Mail address";
+                 }
+                ?>" />
+            <input type="password" id="password" name="password" placeholder="<?php
+                 if ("$lang" == "fr") {
+                     echo "Mot de passe";
+                 }
+                 if ("$lang" == "en") {
+                    echo "Password";
+                 }
+                ?>" />
             <input type="submit" name="submit" id="submit" value=">" />
         </form>
         <div class="liens">
             <ul>
-                <li><a href="../../index.php">PATRIMOINE</a></li>
-                <li><a href="lieuVisite.php">LIEUX VISITÉS</a></li>
-                <li><a id="active" href="">NOUS CONTACTER</a></li>
+                <li><a  href="../../index.php">
+                 <?php
+                 if ("$lang" == "fr") {
+                     echo "CARTE DES PATRIMOINES";
+                 }
+                 if ("$lang" == "en") {
+                    echo "HERITAGE MAP";
+                 }
+                ?>
+             </a></li>
+                <li><a href="lieuVisite.php">
+                <?php
+                 if ("$lang" == "fr") {
+                     echo "LIEUX DE L'UNESCO";
+                 }
+                 if ("$lang" == "en") {
+                    echo "UNESCO PLACES";
+                 }
+                ?>
+                </a></li>
+                <li><a id="active">
+                <?php
+                 if ("$lang" == "fr") {
+                     echo "NOUS CONTACTER";
+                 }
+                 if ("$lang" == "en") {
+                    echo "CONTACT US";
+                 }
+                ?></a></li>
             </ul>
         </div>
-        <img id="logo" src="../../ressource/images/logoUNESCO.png" alt="" />
+        <a href="../../index.php"><img id="logo" src="../../ressource/images/logoUNESCO.png" alt="" /></a>
     </nav>
+
 
     <main>
         <h1>Page de contact - Service informatique</h1>

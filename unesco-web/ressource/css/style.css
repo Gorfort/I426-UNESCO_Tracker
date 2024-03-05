@@ -5,6 +5,10 @@
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
 }
 
 :root {
@@ -167,7 +171,7 @@ input.cesium-geocoder-input {
 }
 
 input.cesium-geocoder-input::placeholder {
-  color: var(--color-white);
+  color: transparent;
 }
 input.cesium-geocoder-input:focus {
   outline: none;
@@ -193,7 +197,7 @@ input.cesium-geocoder-input:focus {
 
 .liens {
   display: flex;
-  width: 80%;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
@@ -205,6 +209,11 @@ nav ul {
 nav ul li {
   display: inline;
   margin: 50px;
+}
+
+nav a {
+  width: 17%;
+  margin-top: 5px;
 }
 
 li a {
