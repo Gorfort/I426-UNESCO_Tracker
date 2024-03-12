@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: 14
 
-      - name: Change working directory
-        run: cd I426-UNESCO_Tracker
-
       - name: Install dependencies
         run: npm install
 
@@ -31,7 +28,7 @@ jobs:
           # Assuming your code is in JavaScript files (modify the command accordingly)
           # This command checks for lines that start with "//" or "/*" (JavaScript comments)
           # Adjust the file extension as needed
-          if grep -rE '(\/\/|\/\*)' ./**/*.js; then
+          if grep -rE '(\/\/|\/\*)' $GITHUB_WORKSPACE/**/*.js; then
             echo "Code contains comments. All good!"
           else
             echo "Code is not commented properly!"
