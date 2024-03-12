@@ -1,5 +1,7 @@
+# Nom du workflow : Comment Check
 name: Comment Check
 
+# Déclencheur du workflow : s'exécute lors de l'ouverture, de la synchronisation ou de la réouverture d'une pull request
 on:
   pull_request:
     types:
@@ -7,30 +9,37 @@ on:
       - synchronize
       - reopened
 
+# Définition des jobs (travaux) du workflow
 jobs:
+  # Job pour vérifier les commentaires dans le code
   check-comments:
+    # Spécification de l'environnement d'exécution (dernière version d'Ubuntu)
     runs-on: ubuntu-latest
 
+    # Étapes (steps) à exécuter dans le job
     steps:
+      # Étape : Récupération du code du référentiel
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Étape : Configuration de Node.js (version 14)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 14
 
+      # Étape : Installation des dépendances à l'aide de npm
       - name: Install dependencies
         run: npm install
 
+      # Étape : Vérification des commentaires dans le code
       - name: Check for comments
         run: |
-          # Assuming your code is in JavaScript files (modify the command accordingly)
-          # This command checks for lines that start with "//" or "/*" (JavaScript comments)
-          # Adjust the file extension as needed
+          # Recherche de lignes contenant des commentaires dans les fichiers JavaScript, CSS et HTML
+          # Affiche un message approprié en fonction des résultats de la recherche
           if grep -rE '(\/\/|\/\*)' $GITHUB_WORKSPACE/**/*.js $GITHUB_WORKSPACE/**/*.css $GITHUB_WORKSPACE/**/*.html; then
-          echo "Code contains comments. All good!"
+            echo "Code contains comments. All good!"
           else
-          echo "Code is not commented properly!"
-          exit 1
+            echo "Code is not commented properly!"
+            exit 1
           fi
