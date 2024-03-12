@@ -1,5 +1,7 @@
+/* Importing the Poppins font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&display=swap");
 
+/* Resetting default styles and setting global styles */
 * {
   font-family: "Poppins", sans-serif;
   color: var(--white);
@@ -7,6 +9,7 @@
   padding: 0;
 }
 
+/* Styling the body and setting a coffee background image */
 body {
   background-image: url("../images/coffeeBackground.png");
   background-repeat: no-repeat;
@@ -14,6 +17,7 @@ body {
   height: 100vh;
 }
 
+/* Defining CSS variables for color scheme */
 :root {
   --main-color: #4f3420;
   --hover-color: #ffebca;
@@ -24,6 +28,7 @@ body {
   --persian-color: #d09265;
 }
 
+/* Styling the navigation bar */
 nav ul {
   background-color: var(--main-color);
   padding: 10px;
@@ -49,11 +54,13 @@ nav ul li a:hover {
   transition: 0.5s ease;
 }
 
+/* Styling the main content area */
 main {
   width: 100%;
   display: flex;
 }
 
+/* Styling the coffee display and basket side */
 main .coffees {
   display: flex;
   grid-template-columns: repeat(4, 0.3fr);
@@ -67,6 +74,7 @@ main .basketSide {
 }
 
 main .basket {
+  /* Styling the basket element */
   width: 90%;
   height: 90%;
   background-color: var(--main-color);
@@ -75,11 +83,13 @@ main .basket {
 }
 
 main .basketTitle {
+  /* Styling the basket title */
   font-size: 45px;
   text-align: center;
   padding: 10px;
 }
 
+/* Styling the coffee selection area */
 main .selection {
   border-radius: 25px;
   width: 80%;
@@ -98,6 +108,7 @@ main .selection p {
   padding-top: 10px;
 }
 
+/* Styling individual coffee boxes */
 main .coffees .box {
   width: 15rem;
   text-align: center;
@@ -131,6 +142,7 @@ main .coffees .box .add {
 }
 
 main .coffees .box .add a {
+  /* Styling the "add" button in the coffee box */
   background-color: var(--brown-color);
   text-decoration: none;
   padding: 5px 25px 5px 25px;
