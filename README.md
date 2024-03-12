@@ -67,3 +67,6 @@ Create an interactive website enabling users to explore and follow UNESCO World 
 <img src="https://github.com/Gorfort/I426-UNESCO_Tracker/blob/main/images/InterfaceList.png" alt="Example" height="500">
 </p>
 
+### Figma models Links 
+Presentation : https://www.figma.com/file/BqyDJd1PIWR0T9NggPXVb3/Untitled?type=design&node-id=1%3A3973&mode=design&t=TZjkqXtP66LMhnvL-1 <br>
+Models : https://www.figma.com/file/9npWusgyKMWyTDLO45cuT7/Untitled-(Copy)?type=design&node-id=0%3A1&mode=design&t=IK8ojuesDuhG2Uzr-1
