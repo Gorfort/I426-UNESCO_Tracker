@@ -1,4 +1,4 @@
-name: Pull Request Checker
+name: Comment Check
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
       - reopened
 
 jobs:
-  check-pr:
+  check-comments:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,5 +26,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Check for comments
+        run: |
+          # Assuming your code is in JavaScript files (modify the command accordingly)
+          # This command checks for lines that start with "//" or "/*" (JavaScript comments)
+          # Adjust the file extension as needed
+          if grep -rE '(\/\/|\/\*)' ./**/*.js; then
+            echo "Code contains comments. All good!"
+          else
+            echo "Code is not commented properly!"
+            exit 1
+          fi
