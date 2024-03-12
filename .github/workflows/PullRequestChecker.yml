@@ -21,7 +21,7 @@ jobs:
           node-version: 14
 
       - name: Change working directory
-        run: cd I426-UNESCO_Tracker/I426-UNESCO_Tracker
+        run: cd I426-UNESCO_Tracker
 
       - name: Install dependencies
         run: npm install
