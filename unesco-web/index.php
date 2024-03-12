@@ -16,80 +16,42 @@
 
         <!-- Formulaire de connexion -->
         <form class="formulaire" method="get" action="src/php/database.php">
-           
             <!-- Adresse email -->
-            <input type="text" id="mail" name="mail" placeholder="<?php
-                 if ("$lang" == "fr") {
-                     echo "Adresse-mail";
-                 }
-                 if ("$lang" == "en") {
-                    echo "Mail address";
-                 }
-                ?>" />
+            <input type="text" id="mail" name="mail" placeholder="<?php if ("$lang" == "fr") { echo "Adresse-mail"; } if ("$lang" == "en") { echo "Mail address"; }?>" />
 
             <!-- Mot de passe -->
-            <input type="password" id="password" name="password" placeholder="<?php
-                 if ("$lang" == "fr") {
-                     echo "Mot de passe";
-                 }
-                 if ("$lang" == "en") {
-                    echo "Password";
-                 }
-                ?>" />
+            <input type="password" id="password" name="password" placeholder="<?php if ("$lang" == "fr") { echo "Mot de passe"; } if ("$lang" == "en") { echo "Password"; }?>" />
 
+            <!-- Redirection sur le fichier database.php -->
             <input type="submit" name="submit" id="submit" value=">" />
         </form>
+
         <!-- Liens dans la barre de navigation -->
         <div class="liens">
             <ul>
+
                 <!-- Version française/anglaise -->
                 <li><a  id="active">
-                 <?php
-                 if ("$lang" == "fr") {
-                     echo "CARTE DES PATRIMOINES";
-                 }
-                 if ("$lang" == "en") {
-                    echo "HERITAGE MAP";
-                 }
-                ?>
-             </a></li>
+                 <?php if ("$lang" == "fr") { echo "CARTE DES PATRIMOINES"; } if ("$lang" == "en") { echo "HERITAGE MAP"; } ?>
+                </a></li>
+
                 <!-- Version française/anglaise -->
                 <li><a href="src/html/lieuVisite.php">
-                <?php
-                 if ("$lang" == "fr") {
-                     echo "LIEUX DE L'UNESCO";
-                 }
-                 if ("$lang" == "en") {
-                    echo "UNESCO PLACES";
-                 }
-                ?>
+                <?php if ("$lang" == "fr") { echo "LIEUX DE L'UNESCO"; } if ("$lang" == "en") { echo "UNESCO PLACES"; } ?>
                 </a></li>
+
                 <!-- Version française/anglaise -->
                 <li><a href="src/html/contact.php">
-                <?php
-                 if ("$lang" == "fr") {
-                     echo "NOUS CONTACTER";
-                 }
-                 if ("$lang" == "en") {
-                    echo "CONTACT US";
-                 }
-                ?></a></li>
+                <?php if ("$lang" == "fr") { echo "NOUS CONTACTER"; } if ("$lang" == "en") { echo "CONTACT US"; } ?></a></li>
+            
             </ul>
         </div>
+
         <a href=""><img id="logo" src="ressource/images/logo_V5.png" alt="" /></a>
     </nav>
 
     <!-- Barre de recherche de lieux -->
-    <p class="searchtext" >
-    <?php
-                 if ("$lang" == "fr") {
-                     echo "Effectuez votre recherche :";
-                 }
-                 if ("$lang" == "en") {
-                    echo "Do your search :";
-                 }
-                ?>
-    </p>
+    <p class="searchtext"><?php if ("$lang" == "fr") { echo "Effectuez votre recherche :"; } if ("$lang" == "en") { echo "Do your search :"; } ?></p>
 
     <div id="cesiumContainer"></div>
 
