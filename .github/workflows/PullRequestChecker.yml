@@ -28,9 +28,9 @@ jobs:
           # Assuming your code is in JavaScript files (modify the command accordingly)
           # This command checks for lines that start with "//" or "/*" (JavaScript comments)
           # Adjust the file extension as needed
-          if grep -rE '(\/\/|\/\*)' $GITHUB_WORKSPACE/**/*.js; then
-            echo "Code contains comments. All good!"
+          if grep -rE '(\/\/|\/\*)' $GITHUB_WORKSPACE/**/*.{js,html,css}; then
+          echo "Code contains comments. All good!"
           else
-            echo "Code is not commented properly!"
-            exit 1
+          echo "Code is not commented properly!"
+          exit 1
           fi
