@@ -68,7 +68,7 @@
                 ?></a></li>
             </ul>
         </div>
-        <a href=""><img id="logo" src="ressource/images/logoUNESCO.png" alt="" /></a>
+        <a href=""><img id="logo" src="ressource/images/logo_V5.png" alt="" /></a>
     </nav>
 
     <!-- Barre de recherche de lieux -->
